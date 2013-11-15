@@ -33,12 +33,13 @@ public class GameNow extends Application {
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
         
-        //Start of file IO test code
-        /*
         list = new GameList();
         gameFile = new CustomFileHandler("gameList.dat");
         
         list = gameFile.readGameList(list);
+        
+        //Start of file IO test code
+        /*
         for (Game g: list) {
             System.out.println(g);
         }

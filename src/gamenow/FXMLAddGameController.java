@@ -38,6 +38,8 @@ public class FXMLAddGameController implements Initializable{
     @FXML
     protected void handleConfirmButton(ActionEvent event) {
         //add game to the game list
+        System.out.println(gName.getText() + " Category = " + gCat.getText());
+        
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         try {
