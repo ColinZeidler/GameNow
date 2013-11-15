@@ -26,6 +26,9 @@ import javafx.stage.Stage;
  * @author Colin
  */
 public class FXMLDocumentController implements Initializable{
+    GameList list;
+    String userID;
+    CustomFileHandler gameFile;
 
     @FXML
     private Text gameNameText;
@@ -49,6 +52,10 @@ public class FXMLDocumentController implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        //TODO
+        Model model = Model.getinstance();
+        
+        gameFile = model.getFilehandler();
+        list = model.getList();
+        userID = model.getUserID();
     }
 }

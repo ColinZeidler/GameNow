@@ -5,14 +5,6 @@
  */
 package gamenow;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.nio.charset.Charset;
-import java.nio.file.FileSystems;
-import java.nio.file.Files;
-import java.nio.file.NoSuchFileException;
-import java.nio.file.Path;
-import java.util.List;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -32,11 +24,11 @@ public class GameNow extends Application {
     @Override
     public void start(Stage stage) throws Exception {
         Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        Model model = Model.getinstance();
         
-        list = new GameList();
-        gameFile = new CustomFileHandler("gameList.dat");
-        
-        list = gameFile.readGameList(list);
+        gameFile = model.getFilehandler();
+        list = model.getList();
+        userID = model.getUserID();
         
         //Start of file IO test code
         /*
