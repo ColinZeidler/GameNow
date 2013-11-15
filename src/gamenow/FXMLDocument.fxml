@@ -17,10 +17,12 @@ the auto gen code breaks this constantly-->
     <ToolBar>
         <items>
             <Button mnemonicParsing="false" onAction="#handleAddGame" text="Add Game" />
+            <Button mnemonicParsing="false" onAction="#handleSaveList" text="Save" />
         </items>
     </ToolBar>
     <GridPane hgap="10.0" vgap="10.0">
-        <Button mnemonicParsing="false" onAction="#handleRandomButton" text="Randomize!" GridPane.columnIndex="0" GridPane.rowIndex="0" />
+        <Button mnemonicParsing="false" onAction="#handleRandomButton" 
+                text="Randomize!" GridPane.columnIndex="0" GridPane.rowIndex="0" />
         <Text fx:id="gameNameText" GridPane.columnIndex="1" GridPane.rowIndex="0" />
         <columnConstraints>
             <ColumnConstraints maxWidth="83.0" prefWidth="83.0" />

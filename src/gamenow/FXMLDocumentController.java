@@ -53,6 +53,11 @@ public class FXMLDocumentController implements Initializable{
             Logger.getLogger(FXMLAddGameController.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
+    
+    @FXML
+    protected void handleSaveList(ActionEvent event) {
+        gameFile.writeGameList(list);
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
