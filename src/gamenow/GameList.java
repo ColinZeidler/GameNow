@@ -17,5 +17,13 @@ public class GameList extends ArrayList<Game>{
      will not have to change this unless I want custom control
      but this will make it easy to do so.
      */
+    public Game getRandom() {
+        Game game = null;
+        if (size() > 0) {
+            int rPos = (int)(Math.random() * size());
+            game = get(rPos);
+        }
+        return game;
+    }
 
 }

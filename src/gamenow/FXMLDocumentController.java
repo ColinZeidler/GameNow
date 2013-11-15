@@ -35,7 +35,11 @@ public class FXMLDocumentController implements Initializable{
 
     @FXML
     protected void handleRandomButton(ActionEvent e) {
-        gameNameText.setText("Random Game!");
+        Game rand = list.getRandom();
+        if (rand != null)
+            gameNameText.setText(rand.getName());
+        else
+            gameNameText.setText("Add a game before you try to pick one");
     }
     
     @FXML
