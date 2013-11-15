@@ -7,34 +7,45 @@
 package gamenow;
 
 import java.util.Date;
-import junit.framework.TestCase;
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import static org.junit.Assert.*;
+import org.junit.Before;
 
 /**
  *
  * @author Colin
  */
-public class GameTest extends TestCase {
+public class GameTest {
     Game testG1, testG2;
     
-    public GameTest(String testName) {
-        super(testName);
+    public GameTest() {
     }
     
-    @Override
-    protected void setUp() throws Exception {
-        super.setUp();
+    @BeforeClass
+    public static void setUpClass() {
+    }
+    
+    @AfterClass
+    public static void tearDownClass() {
+    }
+    
+    @Before
+    public void setUp() {
         testG1 = new Game("Test Game #1", "RPG");
         testG2 = new Game("Test Game #2");
     }
     
-    @Override
-    protected void tearDown() throws Exception {
-        super.tearDown();
+    @After
+    public void tearDown() {
     }
 
     /**
      * Test of getName method, of class Game.
      */
+    @Test
     public void testGetName() {
         System.out.println("getName");
         String expResult1 = "Test Game #1";
@@ -42,12 +53,12 @@ public class GameTest extends TestCase {
         
         System.out.println("Asserting get name returns the correct name");
         assertEquals(expResult1, result1);
-        
     }
 
     /**
      * Test of getCategory method, of class Game.
      */
+    @Test
     public void testGetCategory() {
         System.out.println("getCategory");
         String expResult = "RPG";
@@ -66,6 +77,7 @@ public class GameTest extends TestCase {
     /**
      * Test of getLastPlay method, of class Game.
      */
+    @Test
     public void testGetLastPlay() {
         System.out.println("getLastPlay");
         Game instance = testG1;
@@ -79,6 +91,7 @@ public class GameTest extends TestCase {
     /**
      * Test of setCategory method, of class Game.
      */
+    @Test
     public void testSetCategory() {
         System.out.println("setCategory");
         String cat = "Test Cat";
@@ -90,6 +103,7 @@ public class GameTest extends TestCase {
     /**
      * Test of play method, of class Game.
      */
+    @Test
     public void testPlay() {
         System.out.println("play");
         Game instance = testG2;
@@ -97,13 +111,12 @@ public class GameTest extends TestCase {
         instance.play();
         
         assertEquals(expected, instance.getLastPlay());
-        
-        
     }
 
     /**
      * Test of toString method, of class Game.
      */
+    @Test
     public void testToString() {
         System.out.println("toString");
         Game instance = new Game("Test Game", "Test Cat");

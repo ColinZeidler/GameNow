@@ -3,36 +3,35 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
+
 package gamenow;
 
-import java.io.IOException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import junit.framework.TestCase;
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import static org.junit.Assert.*;
 
 /**
  *
  * @author Colin
  */
-public class CustomFileHandlerTest extends TestCase {
-
-    public CustomFileHandlerTest(String testName) {
-        super(testName);
+public class CustomFileHandlerTest {
+    
+    public CustomFileHandlerTest() {
     }
-
-    @Override
-    protected void setUp() throws Exception {
-        super.setUp();
+    
+    @BeforeClass
+    public static void setUpClass() {
     }
-
-    @Override
-    protected void tearDown() throws Exception {
-        super.tearDown();
+    
+    @AfterClass
+    public static void tearDownClass() {
     }
 
     /**
      * Test of writeGameList method, of class CustomFileHandler.
      */
+    @Test
     public void testWriteGameList() {
         System.out.println("writeGameList");
         GameList list = new GameList();
@@ -49,6 +48,7 @@ public class CustomFileHandlerTest extends TestCase {
     /**
      * Test of readGameList method, of class CustomFileHandler.
      */
+    @Test
     public void testReadGameList() {
         System.out.println("readGameList");
         GameList list = new GameList();
@@ -73,5 +73,5 @@ public class CustomFileHandlerTest extends TestCase {
            assertEquals(list.get(i).toString(), result.get(i).toString());
         }
     }
-
+    
 }
