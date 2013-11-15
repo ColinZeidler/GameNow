@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.geometry.*?>
+
+<VBox id="AnchorPane" prefHeight="720" prefWidth="1280" 
+      xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="gamenow.FXMLAddGameController">
+    <ToolBar>
+        <items>
+            <Button mnemonicParsing="false" onAction="#cancelAddGame" text="Cancel" />
+        </items>
+    </ToolBar>
+    <GridPane  hgap="10" vgap="10">
+        <padding>
+            <Insets bottom="25" top="25" right="25" left="25" />
+        </padding>
+        <Text GridPane.columnIndex="0" GridPane.rowIndex="0" GridPane.columnSpan="2" 
+          text="Add a Game"/>
+        <Label GridPane.columnIndex="0" GridPane.rowIndex="1" text="Name:*" />
+        <TextField GridPane.columnIndex="1" GridPane.rowIndex="1" fx:id="gName" />
+        <Label text="Category:" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+        <TextField GridPane.columnIndex="1" GridPane.rowIndex="2" fx:id="gCat"  />
+        <HBox GridPane.columnIndex="1" GridPane.rowIndex="3" alignment="BOTTOM_RIGHT"> 
+            <Button text="Confirm" onAction="#handleConfirmButton" />
+        </HBox>
+    
+    </GridPane>
+</VBox>

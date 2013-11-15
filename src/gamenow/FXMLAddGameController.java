@@ -17,7 +17,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.text.Text;
+import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 
 /**
@@ -25,23 +25,34 @@ import javafx.stage.Stage;
  *
  * @author Colin
  */
-public class FXMLDocumentController implements Initializable{
+public class FXMLAddGameController implements Initializable{
 
     @FXML
-    private Text gameNameText;
+    private TextField gName, gCat;
 
+    /**
+     * handle confirm button
+     *
+     * @param event
+     */
     @FXML
-    protected void handleRandomButton(ActionEvent e) {
-        gameNameText.setText("Random Game!");
-    }
-    
-    @FXML
-    protected void handleAddGame(ActionEvent event) {
-        //change screens to an add game screen
+    protected void handleConfirmButton(ActionEvent event) {
+        //add game to the game list
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         try {
-            stage.setScene(new Scene((Parent) FXMLLoader.load(getClass().getResource("FXMLAddGame.fxml"))));
+            stage.setScene(new Scene((Parent) FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"))));
+        } catch (IOException ex) {
+            Logger.getLogger(FXMLAddGameController.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    @FXML
+    protected void cancelAddGame(ActionEvent event) {
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        try {
+            stage.setScene(new Scene((Parent) FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"))));
         } catch (IOException ex) {
             Logger.getLogger(FXMLAddGameController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -51,4 +62,5 @@ public class FXMLDocumentController implements Initializable{
     public void initialize(URL url, ResourceBundle rb) {
         //TODO
     }
+
 }

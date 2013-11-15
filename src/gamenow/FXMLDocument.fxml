@@ -12,10 +12,11 @@
  which says xmlns:fx="http://javafx.com/fxml"
 the auto gen code breaks this constantly-->
 
-<VBox prefHeight="720.0" prefWidth="1280.0" xmlns:fx="http://javafx.com/fxml" fx:controller="gamenow.FXMLDocumentController">
+<VBox prefHeight="720.0" prefWidth="1280.0" xmlns:fx="http://javafx.com/fxml" 
+      fx:controller="gamenow.FXMLDocumentController">
     <ToolBar>
         <items>
-            <Button mnemonicParsing="false" onAction="#handleMenuButton" text="Button" />
+            <Button mnemonicParsing="false" onAction="#handleAddGame" text="Add Game" />
         </items>
     </ToolBar>
     <GridPane hgap="10.0" vgap="10.0">
