@@ -57,5 +57,8 @@ public class FXMLDocumentController implements Initializable{
         gameFile = model.getFilehandler();
         list = model.getList();
         userID = model.getUserID();
+        
+        for(Game g : list)
+            System.out.println(g);
     }
 }
