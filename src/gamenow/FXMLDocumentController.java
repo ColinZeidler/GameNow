@@ -10,6 +10,8 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -17,6 +19,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.ListView;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -32,6 +35,8 @@ public class FXMLDocumentController implements Initializable{
 
     @FXML
     private Text gameNameText;
+    @FXML
+    private ListView<Game> recentList;
 
     @FXML
     protected void handleRandomButton(ActionEvent e) {
@@ -58,6 +63,11 @@ public class FXMLDocumentController implements Initializable{
     protected void handleSaveList(ActionEvent event) {
         gameFile.writeGameList(list);
     }
+    
+    @FXML
+    protected void handleAllGamesButton(ActionEvent event) {
+        
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -67,7 +77,7 @@ public class FXMLDocumentController implements Initializable{
         list = model.getList();
         userID = model.getUserID();
         
-        for(Game g : list)
-            System.out.println(g);
+        ObservableList<Game> recent = FXCollections.observableArrayList(list);
+        recentList.setItems(recent);
     }
 }
