@@ -42,7 +42,7 @@ public class FXMLAddGameController implements Initializable{
     protected void handleConfirmButton(ActionEvent event) {
         //add game to the game list
         System.out.println(gName.getText() + " Category = " + gCat.getText());
-        if (gCat.getText() != "")
+        if (!"".equals(gCat.getText()))
             list.add(new Game(gName.getText(), gCat.getText()));
         else 
             list.add(new Game(gName.getText()));
