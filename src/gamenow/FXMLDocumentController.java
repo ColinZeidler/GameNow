@@ -19,7 +19,9 @@ import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 
@@ -37,6 +39,8 @@ public class FXMLDocumentController implements Initializable{
     private Text gameNameText;
     @FXML
     private ListView<Game> recentList;
+    @FXML
+    private GridPane recentGameGrid;
 
     @FXML
     protected void handleRandomButton(ActionEvent e) {
@@ -79,5 +83,10 @@ public class FXMLDocumentController implements Initializable{
         
         ObservableList<Game> recent = FXCollections.observableArrayList(list);
         recentList.setItems(recent);
+        
+        for (int i = 0; i < 10; i++) {
+            Button button = new Button("Button " + i);
+            recentGameGrid.add(button, i%5, (i)/5);
+        }
     }
 }

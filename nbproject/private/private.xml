@@ -15,18 +15,18 @@
             </bookmark>
         </file>
         <file>
-            <url>src/gamenow/GameNow.java</url>
-            <bookmark id="5">
-                <name/>
-                <line>31</line>
-                <key/>
-            </bookmark>
-        </file>
-        <file>
             <url>src/gamenow/Game.java</url>
             <bookmark id="1">
                 <name/>
                 <line>16</line>
+                <key/>
+            </bookmark>
+        </file>
+        <file>
+            <url>src/gamenow/GameNow.java</url>
+            <bookmark id="5">
+                <name/>
+                <line>31</line>
                 <key/>
             </bookmark>
         </file>

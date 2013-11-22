@@ -12,7 +12,6 @@ import java.util.ArrayList;
  * @author Colin
  */
 public class GameList extends ArrayList<Game>{
-    
     /*
      will not have to change this unless I want custom control
      but this will make it easy to do so.
