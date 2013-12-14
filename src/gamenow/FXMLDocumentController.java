@@ -31,9 +31,9 @@ import javafx.stage.Stage;
  * @author Colin
  */
 public class FXMLDocumentController implements Initializable{
-    GameList list;
-    String userID;
-    CustomFileHandler gameFile;
+    private GameList list;
+    private String userID;
+    private CustomFileHandler gameFile;
 
     @FXML
     private Text gameNameText;
@@ -70,6 +70,14 @@ public class FXMLDocumentController implements Initializable{
     
     @FXML
     protected void handleAllGamesButton(ActionEvent event) {
+        //change screens to an add game screen
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        try {
+            stage.setScene(new Scene((Parent) FXMLLoader.load(getClass().getResource("FXMLGameList.fxml"))));
+        } catch (IOException ex) {
+            Logger.getLogger(FXMLAddGameController.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
     }
 
