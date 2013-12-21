@@ -5,6 +5,7 @@
  */
 package gamenow;
 
+import static java.lang.Math.min;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
@@ -53,7 +54,7 @@ public class GameList extends ArrayList<Game>{
         
         //assuming that the games have been sorted by most recent to oldest
         //if not, we will start at (int i = size(); i > size()-10; i--)
-        for (int i=0; i < 10; i++) {
+        for (int i=0; i < min(10, this.size()); i++) {
             recentGames[i] = this.get(i);
         }
     }

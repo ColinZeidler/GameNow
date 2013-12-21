@@ -6,10 +6,12 @@
 
 package gamenow;
 
+import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Before;
 import org.junit.Ignore;
 
 /**
@@ -27,6 +29,14 @@ public class ModelTest {
     
     @AfterClass
     public static void tearDownClass() {
+    }
+
+    @Before
+    public void setUp() throws Exception {
+    }
+
+    @After
+    public void tearDown() throws Exception {
     }
 
     /**
@@ -84,6 +94,46 @@ public class ModelTest {
         String expResult = "";
         String result = instance.getUserID();
         assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of getLastScreen method, of class Model.
+     */
+    @Test
+    public void testGetLastScreen() {
+        System.out.println("getLastScreen");
+        Model instance = new Model();
+        String expResult = "";
+        String result = instance.getLastScreen();
+        assertEquals(expResult, result);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setLastScreen method, of class Model.
+     */
+    @Test
+    public void testSetLastScreen() {
+        System.out.println("setLastScreen");
+        String screen = "";
+        Model instance = new Model();
+        instance.setLastScreen(screen);
+        // TODO review the generated test code and remove the default call to fail.
+        fail("The test case is a prototype.");
+    }
+
+    /**
+     * Test of setUserID method, of class Model.
+     */
+    @Test
+    public void testSetUserID() {
+        System.out.println("setUserID");
+        String user = "";
+        Model instance = new Model();
+        instance.setUserID(user);
         // TODO review the generated test code and remove the default call to fail.
         fail("The test case is a prototype.");
     }
