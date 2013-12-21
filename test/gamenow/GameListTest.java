@@ -94,9 +94,11 @@ public class GameListTest {
         instance.get(4).play();
         Thread.sleep(500);
         
+        Game[] expected = new Game[] {instance.get(4), instance.get(3), instance.get(2), 
+        instance.get(1), instance.get(0), null, null, null, null, null};
+        
         instance.RecentFill();
-        assertArrayEquals(new Game[]{instance.get(4), instance.get(3), instance.get(2), 
-        instance.get(1), instance.get(0), null, null, null, null, null}, instance.recentGames);
+        assertArrayEquals(expected, instance.recentGames);
         
         System.out.println("RecentFill Passed");
         System.out.println("");
@@ -130,12 +132,14 @@ public class GameListTest {
         Thread.sleep(500);
         game = instance.get(0);
         
+        Game[] expected = new Game[]{game, instance.get(4), instance.get(3), instance.get(2), 
+        instance.get(1), null, null, null, null, null};
+        
         //play all games
         instance.RecentFill();
         instance.justPlayed(game);
         
-        assertArrayEquals(new Game[]{game, instance.get(4), instance.get(3), instance.get(2), 
-        instance.get(1), null, null, null, null, null}, instance.recentGames);
+        assertArrayEquals(expected, instance.recentGames);
         
         System.out.println("justPlayed passed");
         System.out.println("");

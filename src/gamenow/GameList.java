@@ -5,6 +5,7 @@
  */
 package gamenow;
 
+import static java.lang.Math.max;
 import static java.lang.Math.min;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -44,17 +45,20 @@ public class GameList extends ArrayList<Game>{
      * 10 into the recentGames array
      */
     public void RecentFill() {
-        Comparator<Game> lastPlayed = new Comparator<Game>() {
+        Comparator<Game> lastPlayed;
+        lastPlayed = new Comparator<Game>() {
             @Override
             public int compare(Game g1, Game g2) {
-                    return g1.getLastPlay().compareTo(g2.getLastPlay());
+                int i;
+                i = (g1.getLastPlay().compareTo(g2.getLastPlay())) * -1;
+                return i;
             }
         };
         Collections.sort(this, lastPlayed);
         
         //assuming that the games have been sorted by most recent to oldest
         //if not, we will start at (int i = size(); i > size()-10; i--)
-        for (int i=0; i < min(10, this.size()); i++) {
+        for (int i=0; i < min(this.size(), 10); i++) {
             recentGames[i] = this.get(i);
         }
     }
@@ -67,7 +71,7 @@ public class GameList extends ArrayList<Game>{
     public void justPlayed(Game game) {
         Game temp = game, temp2;
         for (int i=0; i < recentGames.length; i++) {
-            if (recentGames[i].equals(game)) {
+            if (recentGames[i] == null || recentGames[i].equals(game)) {
                 recentGames[i] = temp;
                 break;
             }
