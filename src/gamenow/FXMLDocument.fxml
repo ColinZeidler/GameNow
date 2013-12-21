@@ -32,6 +32,10 @@ the auto gen code breaks this constantly-->
         <Label text="Recently Played" GridPane.columnIndex="0" GridPane.rowIndex="1" />
         <ListView fx:id="recentList" minWidth="400.0" GridPane.columnIndex="0" 
                   GridPane.columnSpan="3" GridPane.rowIndex="2" />
+        <GridPane hgap="10" vgap="10" GridPane.columnIndex="0" GridPane.rowIndex="3"
+                  GridPane.columnSpan="3" fx:id="recentGameGrid" >
+            
+        </GridPane>
         <columnConstraints>
             <ColumnConstraints hgrow="NEVER" minWidth="10.0" />
             <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />

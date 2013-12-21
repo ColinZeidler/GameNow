@@ -37,9 +37,16 @@
             <file>file:/C:/Users/Colin/Documents/NetBeansProjects/GameNow/src/gamenow/FXMLDocumentController.java</file>
             <file>file:/C:/Users/Colin/Documents/NetBeansProjects/GameNow/src/gamenow/FXMLAddGame.fxml</file>
             <file>file:/C:/Users/Colin/Documents/NetBeansProjects/GameNow/src/gamenow/FXMLDocument.fxml</file>
+<<<<<<< HEAD
             <file>file:/C:/Users/Colin/Documents/NetBeansProjects/GameNow/src/gamenow/FXMLAddGameController.java</file>
             <file>file:/C:/Users/Colin/Documents/NetBeansProjects/GameNow/src/gamenow/GameList.java</file>
             <file>file:/C:/Users/Colin/Documents/NetBeansProjects/GameNow/src/gamenow/Game.java</file>
+=======
+            <file>file:/C:/Users/Colin/Documents/NetBeansProjects/GameNow/src/gamenow/FXMLGameListController.java</file>
+            <file>file:/C:/Users/Colin/Documents/NetBeansProjects/GameNow/src/gamenow/Game.java</file>
+            <file>file:/C:/Users/Colin/Documents/NetBeansProjects/GameNow/src/gamenow/GameList.java</file>
+            <file>file:/C:/Users/Colin/Documents/NetBeansProjects/GameNow/src/gamenow/FXMLGameList.fxml</file>
+>>>>>>> 01e89fbc1b14a846ca206bef5ab1cdb7be14d334
             <file>file:/C:/Users/Colin/Documents/NetBeansProjects/GameNow/src/gamenow/CustomFileHandler.java</file>
         </group>
     </open-files>

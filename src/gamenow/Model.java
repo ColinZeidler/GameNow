@@ -19,7 +19,7 @@ public class Model {
     }
     
     private GameList list;
-    private CustomFileHandler filehandler;
+    final private CustomFileHandler filehandler;
     private String userID;
     
     public Model() {
