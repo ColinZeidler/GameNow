@@ -12,7 +12,6 @@ import org.junit.BeforeClass;
 import org.junit.Test;
 import static org.junit.Assert.*;
 import org.junit.Before;
-import org.junit.Ignore;
 
 /**
  *
@@ -42,7 +41,6 @@ public class ModelTest {
     /**
      * Test of getinstance method, of class Model.
      */
-    @Ignore
     @Test
     public void testGetinstance() {
         System.out.println("getinstance");
@@ -56,7 +54,6 @@ public class ModelTest {
     /**
      * Test of getList method, of class Model.
      */
-    @Ignore
     @Test
     public void testGetList() {
         System.out.println("getList");
@@ -71,7 +68,6 @@ public class ModelTest {
     /**
      * Test of getFilehandler method, of class Model.
      */
-    @Ignore
     @Test
     public void testGetFilehandler() {
         System.out.println("getFilehandler");
@@ -86,7 +82,6 @@ public class ModelTest {
     /**
      * Test of getUserID method, of class Model.
      */
-    @Ignore
     @Test
     public void testGetUserID() {
         System.out.println("getUserID");
