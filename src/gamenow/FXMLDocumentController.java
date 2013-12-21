@@ -31,6 +31,7 @@ import javafx.stage.Stage;
  * @author Colin
  */
 public class FXMLDocumentController implements Initializable{
+    private Model model;
     private GameList list;
     private String userID;
     private CustomFileHandler gameFile;
@@ -54,6 +55,7 @@ public class FXMLDocumentController implements Initializable{
     @FXML
     protected void handleAddGame(ActionEvent event) {
         //change screens to an add game screen
+        model.setLastScreen("FXMLDocument.fxml");
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         try {
@@ -71,6 +73,7 @@ public class FXMLDocumentController implements Initializable{
     @FXML
     protected void handleAllGamesButton(ActionEvent event) {
         //change screens to an add game screen
+        model.setLastScreen("FXMLDocument.fxml");
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         try {
@@ -83,7 +86,7 @@ public class FXMLDocumentController implements Initializable{
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        Model model = Model.getinstance();
+        model = Model.getinstance();
         
         gameFile = model.getFilehandler();
         list = model.getList();

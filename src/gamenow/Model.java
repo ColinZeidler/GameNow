@@ -21,6 +21,7 @@ public class Model {
     private GameList list;
     final private CustomFileHandler filehandler;
     private String userID;
+    private String lastScreen;
     
     public Model() {
         list = new GameList();
@@ -40,5 +41,17 @@ public class Model {
     
     public String getUserID() {
         return userID;
+    }
+    
+    public String getLastScreen() {
+        return lastScreen;
+    }
+    
+    public void setLastScreen(String screen) {
+        lastScreen = screen;
+    }
+    
+    public void setUserID(String user) {
+        userID = user;
     }
 }

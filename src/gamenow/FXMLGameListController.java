@@ -26,9 +26,10 @@ import javafx.stage.Stage;
  * @author Colin
  */
 public class FXMLGameListController implements Initializable {
-    GameList list;
-    String userID;
-    CustomFileHandler gameFile;
+    private Model model;
+    private GameList list;
+    private String userID;
+    private CustomFileHandler gameFile;
     
     /*
     button handlers
@@ -36,6 +37,7 @@ public class FXMLGameListController implements Initializable {
     @FXML
     protected void newGame(ActionEvent event) {
         //change screens to an add game screen
+        model.setLastScreen("FXMLGameList.fxml");
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         try {
@@ -48,6 +50,7 @@ public class FXMLGameListController implements Initializable {
     @FXML
     protected void backToHome(ActionEvent event) {
         //change screens to an add game screen
+        model.setLastScreen("FXMLGameList.fxml");
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         try {
@@ -62,7 +65,7 @@ public class FXMLGameListController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        Model model = Model.getinstance();
+        model = Model.getinstance();
         
         gameFile = model.getFilehandler();
         list = model.getList();

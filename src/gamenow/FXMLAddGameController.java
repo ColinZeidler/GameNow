@@ -29,6 +29,7 @@ public class FXMLAddGameController implements Initializable{
     GameList list;
     String userID;
     CustomFileHandler gameFile;
+    String prevScreen;
 
     @FXML
     private TextField gName, gCat;
@@ -50,7 +51,7 @@ public class FXMLAddGameController implements Initializable{
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         try {
-            stage.setScene(new Scene((Parent) FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"))));
+            stage.setScene(new Scene((Parent) FXMLLoader.load(getClass().getResource(prevScreen))));
         } catch (IOException ex) {
             Logger.getLogger(FXMLAddGameController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -61,7 +62,7 @@ public class FXMLAddGameController implements Initializable{
         Node node = (Node) event.getSource();
         Stage stage = (Stage) node.getScene().getWindow();
         try {
-            stage.setScene(new Scene((Parent) FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"))));
+            stage.setScene(new Scene((Parent) FXMLLoader.load(getClass().getResource(prevScreen))));
         } catch (IOException ex) {
             Logger.getLogger(FXMLAddGameController.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -74,6 +75,7 @@ public class FXMLAddGameController implements Initializable{
         gameFile = model.getFilehandler();
         list = model.getList();
         userID = model.getUserID();
+        prevScreen = model.getLastScreen();
     }
 
 }
