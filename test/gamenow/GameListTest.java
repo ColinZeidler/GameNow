@@ -69,9 +69,10 @@ public class GameListTest {
 
     /**
      * Test of RecentFill method, of class GameList.
+     * @throws java.lang.InterruptedException
      */
     @Test
-    public void testRecentFill() {
+    public void testRecentFill() throws InterruptedException {
         System.out.println("RecentFill");
         GameList instance = new GameList();
         //add the games
@@ -83,14 +84,19 @@ public class GameListTest {
         
         //make all games played
         instance.get(0).play();
+        Thread.sleep(500);
         instance.get(1).play();
+        Thread.sleep(500);
         instance.get(2).play();
+        Thread.sleep(500);
         instance.get(3).play();
+        Thread.sleep(500);
         instance.get(4).play();
+        Thread.sleep(500);
         
         instance.RecentFill();
-        assertArrayEquals(new Game[]{instance.get(0), instance.get(1), instance.get(2), 
-        instance.get(3), instance.get(4), null, null, null, null, null}, instance.recentGames);
+        assertArrayEquals(new Game[]{instance.get(4), instance.get(3), instance.get(2), 
+        instance.get(1), instance.get(0), null, null, null, null, null}, instance.recentGames);
         
         System.out.println("RecentFill Passed");
         System.out.println("");
@@ -98,13 +104,38 @@ public class GameListTest {
 
     /**
      * Test of justPlayed method, of class GameList.
+     * @throws java.lang.InterruptedException
      */
     @Test
-    public void testJustPlayed() {
+    public void testJustPlayed() throws InterruptedException {
         System.out.println("justPlayed");
-        Game game = null;
+        Game game;
         GameList instance = new GameList();
+        instance.add(new Game("Game 1", "cat1"));
+        instance.add(new Game("Game 2", "cat1"));
+        instance.add(new Game("Game 3", "cat2"));
+        instance.add(new Game("Game 4", "cat3"));
+        instance.add(new Game("Game 5", "cat5"));
+        
+        //make all games played
+        instance.get(0).play();
+        Thread.sleep(500);
+        instance.get(1).play();
+        Thread.sleep(500);
+        instance.get(2).play();
+        Thread.sleep(500);
+        instance.get(3).play();
+        Thread.sleep(500);
+        instance.get(4).play();
+        Thread.sleep(500);
+        game = instance.get(0);
+        
+        //play all games
+        instance.RecentFill();
         instance.justPlayed(game);
+        
+        assertArrayEquals(new Game[]{game, instance.get(4), instance.get(3), instance.get(2), 
+        instance.get(1), null, null, null, null, null}, instance.recentGames);
         
         System.out.println("justPlayed passed");
         System.out.println("");
