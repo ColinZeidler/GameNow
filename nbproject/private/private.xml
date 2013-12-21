@@ -15,14 +15,6 @@
             </bookmark>
         </file>
         <file>
-            <url>src/gamenow/GameNow.java</url>
-            <bookmark id="5">
-                <name/>
-                <line>31</line>
-                <key/>
-            </bookmark>
-        </file>
-        <file>
             <url>src/gamenow/Game.java</url>
             <bookmark id="1">
                 <name/>
@@ -30,16 +22,24 @@
                 <key/>
             </bookmark>
         </file>
+        <file>
+            <url>src/gamenow/GameNow.java</url>
+            <bookmark id="5">
+                <name/>
+                <line>31</line>
+                <key/>
+            </bookmark>
+        </file>
     </editor-bookmarks>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/C:/Users/Colin/Documents/NetBeansProjects/GameNow/src/gamenow/GameNow.java</file>
-            <file>file:/C:/Users/Colin/Documents/NetBeansProjects/GameNow/src/gamenow/FXMLAddGame.fxml</file>
             <file>file:/C:/Users/Colin/Documents/NetBeansProjects/GameNow/src/gamenow/FXMLDocumentController.java</file>
+            <file>file:/C:/Users/Colin/Documents/NetBeansProjects/GameNow/src/gamenow/FXMLAddGame.fxml</file>
             <file>file:/C:/Users/Colin/Documents/NetBeansProjects/GameNow/src/gamenow/FXMLDocument.fxml</file>
             <file>file:/C:/Users/Colin/Documents/NetBeansProjects/GameNow/src/gamenow/FXMLAddGameController.java</file>
-            <file>file:/C:/Users/Colin/Documents/NetBeansProjects/GameNow/src/gamenow/Game.java</file>
             <file>file:/C:/Users/Colin/Documents/NetBeansProjects/GameNow/src/gamenow/GameList.java</file>
+            <file>file:/C:/Users/Colin/Documents/NetBeansProjects/GameNow/src/gamenow/Game.java</file>
             <file>file:/C:/Users/Colin/Documents/NetBeansProjects/GameNow/src/gamenow/CustomFileHandler.java</file>
         </group>
     </open-files>
