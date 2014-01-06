@@ -19,9 +19,8 @@ import org.junit.runners.Suite;
  */
 @RunWith(Suite.class)
 @Suite.SuiteClasses({gamenow.GameNowTest.class, gamenow.ModelTest.class, 
-    gamenow.FXMLGameListControllerTest.class, gamenow.GameTest.class, 
-    gamenow.FXMLAddGameControllerTest.class, gamenow.FXMLDocumentControllerTest.class, 
-    gamenow.GameListTest.class, gamenow.CustomFileHandlerTest.class})
+    gamenow.GameTest.class, gamenow.GameListTest.class,
+    gamenow.CustomFileHandlerTest.class})
 public class GamenowSuite {
 
     @BeforeClass

@@ -5,6 +5,8 @@
  */
 package gamenow;
 
+import gamenow.Game;
+import gamenow.GameList;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.EOFException;

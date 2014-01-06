@@ -23,7 +23,7 @@ public class GameNow extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("FXMLDocument.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("ui/FXMLDocument.fxml"));
         Model model = Model.getinstance();
         
         gameFile = model.getFilehandler();
