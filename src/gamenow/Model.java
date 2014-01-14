@@ -28,7 +28,7 @@ public class Model {
     final private String APIkey;
     
     public Model() {
-        APIkey = "testkey";
+        APIkey = "testkey"; //remove key before pushing
         list = new GameList();
         filehandler = new CustomFileHandler("gameList.dat");
         
