@@ -13,7 +13,7 @@
 the auto gen code breaks this constantly-->
 
 <VBox prefHeight="720.0" prefWidth="1280.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="gamenow.FXMLDocumentController">
+      fx:controller="gamenow.ui.FXMLDocumentController">
     <ToolBar>
         <items>
             <Button mnemonicParsing="false" onAction="#handleAddGame" text="Add Game" />
@@ -30,8 +30,8 @@ the auto gen code breaks this constantly-->
                     text="All Games" />
         </HBox>
         <Label text="Recently Played" GridPane.columnIndex="0" GridPane.rowIndex="1" />
-        <ListView fx:id="recentList" minWidth="400.0" GridPane.columnIndex="0" 
-                  GridPane.columnSpan="3" GridPane.rowIndex="2" />
+        <!--<ListView fx:id="recentList" minWidth="400.0" GridPane.columnIndex="0" 
+                  GridPane.columnSpan="3" GridPane.rowIndex="2" />-->
         <GridPane hgap="10" vgap="10" GridPane.columnIndex="0" GridPane.rowIndex="3"
                   GridPane.columnSpan="3" fx:id="recentGameGrid" >
             

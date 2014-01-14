@@ -25,6 +25,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.ListView;
+import javafx.scene.image.ImageView;
 import javafx.scene.layout.GridPane;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -96,11 +97,13 @@ public class FXMLDocumentController implements Initializable{
         list = model.getList();
         userID = model.getUserID();
         
-        ObservableList<Game> recent = FXCollections.observableArrayList(list);
-        recentList.setItems(recent);
+//        ObservableList<Game> recent = FXCollections.observableArrayList(list);
+//        recentList.setItems(recent);
         
         for (int i = 0; i < 10; i++) {
             Button button = new Button("Button " + i);
+            ImageView image = new ImageView(model.getImage());
+            button.setGraphic(image);
             recentGameGrid.add(button, i%5, (i)/5);
         }
     }

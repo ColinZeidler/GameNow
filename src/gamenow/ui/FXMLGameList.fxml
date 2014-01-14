@@ -9,7 +9,7 @@
 
 <VBox id="AnchorPane" prefHeight="720" prefWidth="1280" 
             styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml" 
-            fx:controller="gamenow.FXMLGameListController">
+            fx:controller="gamenow.ui.FXMLGameListController">
     <!--<stylesheets>
         <URL value="@fxmlgamelist.css"/>
     </stylesheets>-->
@@ -19,4 +19,7 @@
             <Button mnemonicParsing="false" onAction="#newGame" text="Add Game"/>  
         </items>
     </ToolBar>
+    <GridPane hgap="10.0" vgap="10.0" fx:id="gameGrid">
+        
+    </GridPane>
 </VBox>
