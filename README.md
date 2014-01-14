@@ -9,11 +9,13 @@ Random Game selector, with steam games list integration
 2. List of all games currently added
 3. ability to add games by hand
 
+##In Progress Features
+1. Steam game list api integration
+2. Rendering of list of all games
 
 ##Future goals
-1. get list of games from steam account, using steam api
-2. search for games on the hard drive
-3. launch games directly from the program, by linking them to a .exe file
+1. search for games on the hard drive
+2. launch games directly from the program, by linking them to a .exe file
 
 ----
 created in NetBeans
