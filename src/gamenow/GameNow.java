@@ -29,6 +29,9 @@ public class GameNow extends Application {
         gameFile = model.getFilehandler();
         list = model.getList();
         userID = model.getUserID();
+        
+        //temporary test variable
+        model.setUserID("Strykk");
 
         Scene scene = new Scene(root);
 
