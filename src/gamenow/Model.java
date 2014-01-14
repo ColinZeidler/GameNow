@@ -6,6 +6,8 @@
 
 package gamenow;
 
+import javafx.scene.image.Image;
+
 /**
  * Contains all of the information that is used in the app. allowing access
  *  from a single location
@@ -22,12 +24,14 @@ public class Model {
     final private CustomFileHandler filehandler;
     private String userID;
     private String lastScreen;
+    final private Image gameImage;
     
     public Model() {
         list = new GameList();
         filehandler = new CustomFileHandler("gameList.dat");
         
         list = filehandler.readGameList(list);
+        gameImage = new Image("gamenow/res/no-image.png"); //image does not load...
     }
     
     
@@ -53,5 +57,9 @@ public class Model {
     
     public void setUserID(String user) {
         userID = user;
+    }
+    
+    public Image getImage() {
+        return gameImage;
     }
 }
