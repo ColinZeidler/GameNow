@@ -25,8 +25,10 @@ public class Model {
     private String userID;
     private String lastScreen;
     final private Image gameImage;
+    final private String APIkey;
     
     public Model() {
+        APIkey = "testkey";
         list = new GameList();
         filehandler = new CustomFileHandler("gameList.dat");
         
@@ -61,5 +63,9 @@ public class Model {
     
     public Image getImage() {
         return gameImage;
+    }
+    
+    public String getKey() {
+        return APIkey;
     }
 }
