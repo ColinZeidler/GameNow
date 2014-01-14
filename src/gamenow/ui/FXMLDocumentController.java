@@ -9,6 +9,7 @@ import gamenow.CustomFileHandler;
 import gamenow.Game;
 import gamenow.GameList;
 import gamenow.Model;
+import gamenow.steamapi.WebGet;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -87,6 +88,18 @@ public class FXMLDocumentController implements Initializable{
             Logger.getLogger(FXMLAddGameController.class.getName()).log(Level.SEVERE, null, ex);
         }
         
+    }
+    
+    @FXML
+    protected void handleWebGet(ActionEvent event) {
+        WebGet webGames = new WebGet();
+        try {
+            webGames.connect();
+            webGames.output();
+        } catch (IOException ex) {
+            Logger.getLogger(FXMLDocumentController.class.getName()).log(Level.SEVERE, null, ex);
+            //unable to read data
+        }
     }
 
     @Override

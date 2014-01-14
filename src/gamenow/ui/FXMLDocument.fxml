@@ -18,6 +18,7 @@ the auto gen code breaks this constantly-->
         <items>
             <Button mnemonicParsing="false" onAction="#handleAddGame" text="Add Game" />
             <Button mnemonicParsing="false" onAction="#handleSaveList" text="Save" />
+            <Button mnemonicParsing="false" onAction="#handleWebGet" text="Add Steam" />
         </items>
     </ToolBar>
     <GridPane hgap="10.0" vgap="10.0">
