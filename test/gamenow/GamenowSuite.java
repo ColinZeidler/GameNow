@@ -18,9 +18,8 @@ import org.junit.runners.Suite;
  * @author Colin
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({gamenow.GameNowTest.class, gamenow.ModelTest.class, 
-    gamenow.GameTest.class, gamenow.GameListTest.class,
-    gamenow.CustomFileHandlerTest.class})
+@Suite.SuiteClasses({gamenow.GameNowTest.class, gamenow.GameTest.class,
+    gamenow.GameListTest.class, gamenow.CustomFileHandlerTest.class})
 public class GamenowSuite {
 
     @BeforeClass
