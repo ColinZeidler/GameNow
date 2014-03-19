@@ -95,8 +95,8 @@ public class FXMLGameListController implements Initializable {
         int count = 0;
         for (Game g: list) {
             Button button = new Button(g.getName());
-            ImageView image = new ImageView(model.getImage());
-            button.setGraphic(image);
+//            ImageView image = new ImageView(model.getImage());
+//            button.setGraphic(image);
             gameGrid.add(button, count/vMax, count % vMax);
             
             count++;
