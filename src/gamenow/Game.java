@@ -51,8 +51,12 @@ public class Game  implements Serializable{
         category = cat;
     }
 
-    public void play() {
-        lastPlayed = new Date().getTime();    //sets the last played time to right now
+    /**
+     * updates that last played time of the game to the current time
+     * Is called when calling GameList.lastPlayed, do not call directly...
+     */
+    protected void play() {
+        lastPlayed = new Date().getTime();
     }
     
     @Override

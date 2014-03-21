@@ -16,6 +16,7 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -37,7 +38,7 @@ public class FXMLGameListController implements Initializable {
     private GameList list;
     private String userID;
     private CustomFileHandler gameFile;
-    private int w,h;
+    private double w,h;
     
     @FXML
     private GridPane gameGrid;
@@ -73,6 +74,8 @@ public class FXMLGameListController implements Initializable {
 
     /**
      * Initializes the controller class.
+     * @param url
+     * @param rb
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -88,13 +91,30 @@ public class FXMLGameListController implements Initializable {
     private void placeGames() {
         //look at height of window, and set grid height based on this.
             //assuming h=720, w=1280
-        w=1280;
-        h=720;
+//        w=gameGrid.getScene().getWindow().getWidth();
+//        h=gameGrid.getScene().getWindow().getHeight();
+//        System.out.println("width: " + w + " height: " + h);
         //loop through all of the games
         int vMax = (720-100) / 200;
         int count = 0;
         for (Game g: list) {
             Button button = new Button(g.getName());
+            button.setOnAction(new EventHandler<ActionEvent>() {
+
+                @Override
+                public void handle(ActionEvent t) {
+                    String title = ((Button) t.getSource()).getText();
+                    //TODO get the gameobject based on the title
+                    Game curr = list.get(title);
+                    //make a call to change the play time of a game
+                    list.justPlayed(curr);
+                    //print out list of games for debugging
+                    System.out.println("Recent Games: ");
+                    for (Game recentGame : list.recentGames) {
+                        System.out.println(recentGame);
+                    }
+                }
+            });
 //            ImageView image = new ImageView(model.getImage());
 //            button.setGraphic(image);
             gameGrid.add(button, count/vMax, count % vMax);

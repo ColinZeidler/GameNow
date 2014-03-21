@@ -5,7 +5,6 @@
  */
 package gamenow;
 
-import static java.lang.Math.max;
 import static java.lang.Math.min;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -65,10 +64,12 @@ public class GameList extends ArrayList<Game>{
     
     /**
      * Places the given game at the front of the recentGames list, and shuffles
-     * the list around
+     * the list around, bumps the last played time of the game passed in.
+     * 
      * @param game the most recent game played
      */
     public void justPlayed(Game game) {
+        game.play();
         Game temp = game, temp2;
         for (int i=0; i < recentGames.length; i++) {
             if (recentGames[i] == null || recentGames[i].equals(game)) {
@@ -79,6 +80,21 @@ public class GameList extends ArrayList<Game>{
             recentGames[i] = temp;
             temp = temp2;
         }
+    }
+    
+    /**
+     * 
+     * @param title title of the game to find
+     * @return game with the given title if exists, otherwise NULL
+     */
+    public Game get(String title) {
+        for (Game g: this) {
+            if (g.getName().equals(title))
+                return g;
+        }
+        
+        //did not find a game matching this title
+        return null;
     }
 
 }
